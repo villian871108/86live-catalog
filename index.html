@@ -30,6 +30,11 @@ footer{text-align:center;color:#999;font-size:12px;padding:24px 16px}.ship2{back
 .bar .f{background:#fff;color:#1877f2;border:1.5px solid #1877f2}.bar .m{background:linear-gradient(135deg,#0084ff,#a334fa);color:#fff}
 #t{position:fixed;bottom:84px;left:50%;transform:translateX(-50%);background:#000c;color:#fff;padding:10px 16px;border-radius:20px;display:none;font-size:13px;width:max-content;max-width:90%;z-index:11}
 .desc{margin:8px 0;font-size:13px;line-height:1.55;text-align:left;background:#fff7fa;border-radius:10px;padding:8px 10px}.desc h4{margin:8px 0 2px;font-size:13px;color:var(--pk)}.desc h4:first-child{margin-top:0}.desc p{margin:0}.desc ul{margin:0;padding-left:18px}
+.c .desc,.c details,.c .vid,.c small{display:none}.c img,.c h3{cursor:pointer}
+#sh{position:fixed;inset:0;z-index:20;background:#fff;overflow-y:auto;display:none;padding-bottom:30px}#sh.on{display:block}
+#sh .x{position:sticky;top:0;float:right;margin:10px;width:40px;height:40px;border:0;border-radius:50%;background:#000a;color:#fff;font-size:22px;z-index:2}
+#sh img{width:100%;display:block}#sh .b{padding:14px 16px}#sh .code{font-weight:800;color:var(--pk)}#sh h3{font-size:18px;margin:6px 0}#sh small{display:block;color:#666;margin-bottom:6px}
+#sh .desc,#sh details{display:block}#sh .vid{display:block}#sh details:not([open])>pre{display:block}#sh summary{display:none}
 </style></head><body><header><h1 class="brand">86live</h1><div class="sub">🇹🇭 泰国代购</div><div class="co">86 LIVE MALL MALAYSIA S/B</div><div class="ship">🚚 西马邮费 <b>RM10</b>｜东马 <b>RM30</b>（超过2kg慢邮）任买</div></header>
 <nav class="tabs"><a href="#df" class="on">Tofu</a><a href="#m">Makro</a></nav>
 <section id="df"><h2>Tofu<span>DF 系列</span></h2><div class="g"><article class="c"><img loading="lazy" src="img/DF1.webp" alt="DF1"><div class="b"><span class="code">DF1</span><h3>泰国爆款 Alpha Arbutin 3+ 胶原美白身体乳 350ml</h3><small>Precious Skin Alpha Arbutin 3+ Collagen Lotion 350ml</small><div class="p">RM27.00</div><div class="desc"><h4>产品介绍</h4><p>Precious Skin 是泰国本土人气身体护理品牌。这款 Alpha Arbutin 3+ 胶原身体乳含 α-熊果苷与胶原蛋白，质地易推开，日常涂抹帮助肌肤看起来更均匀透亮。大瓶装全家可用，性价比高。</p><h4>主要功效/特点</h4><ul><li>含 α-熊果苷，帮助改善暗沉、提亮肤色</li><li>添加胶原蛋白，滋润保湿、肌肤柔嫩</li><li>含 UV 防护成分，日常出门更安心</li><li>大容量，适合每天全身使用</li></ul><h4>适合人群</h4><p>想改善身体肤色暗沉、皮肤干燥的人士；适合马来西亚炎热天气日常使用</p><h4>使用方法</h4><p>沐浴后取适量均匀涂抹全身，轻揉至吸收；早晚各一次</p><h4>规格</h4><p>350ml</p></div><details><summary>查看详情</summary><pre>🇹🇭 泰国代购
@@ -344,16 +349,25 @@ footer{text-align:center;color:#999;font-size:12px;padding:24px 16px}.ship2{back
 💰 一大包 只要 15块
 要的赶紧下单哦 🛒
 📝 下单方式：留言 编号+数量（例：M105+1）</pre></details><a class="vid" href="https://www.facebook.com/reel/1109813408188503" target="_blank">▶ 观看视频</a><div class="qty"><button type="button" aria-label="减少" onclick="q(this,-1)">−</button><input type="number" min="1" value="1" inputmode="numeric" aria-label="数量"><button type="button" aria-label="增加" onclick="q(this,1)">+</button></div><button class="ob" onclick="order('M105',this)">下单</button></div></article></div>
-</section><footer><div class="ship2">🚚 运费：西马 RM10｜东马 RM30（超过2kg慢邮）任买<br>🇹🇭 泰国代购 · 下单请留言 产品代码+数量</div>点「下单」会打开 Messenger 并附上订单代码（已同时复制到剪贴板）<br>© 86 LIVE MALL MALAYSIA S/B</footer><div id="t"></div><div class="bar"><a class="f" href="https://www.facebook.com/86livemallmsdnbhd" target="_blank">👍 FB 专页</a><a class="m" href="https://m.me/86livemallmsdnbhd" target="_blank">💬 Messenger 咨询</a></div>
+</section><footer><div class="ship2">🚚 运费：西马 RM10｜东马 RM30（超过2kg慢邮）任买<br>🇹🇭 泰国代购 · 下单请留言 产品代码+数量</div>点「下单」会打开 Messenger 并附上订单代码（如 DF5+3）（已同时复制到剪贴板）<br>© 86 LIVE MALL MALAYSIA S/B</footer><div id="t"></div><div class="bar"><a class="f" href="https://www.facebook.com/86livemallmsdnbhd" target="_blank">👍 FB 专页</a><a class="m" href="https://m.me/86livemallmsdnbhd" target="_blank">💬 Messenger 咨询</a></div>
 <script>
 // ===== 下单链接配置：替换此常量即可 ({code} 会被替换为产品代码) =====
-const ORDER_URL = "https://m.me/86livemallmsdnbhd?text=" + encodeURIComponent("我要下单 ") + "{code}%2B1";
+const ORDER_URL = "https://m.me/86livemallmsdnbhd?text=" + "{code}%2B1";
 function qv(i){let n=parseInt(i.value,10);if(!(n>=1))n=1;n=Math.min(n,999);i.value=n;return n}
 function q(b,d){const i=b.parentNode.querySelector('input');i.value=qv(i)+d;qv(i)}
 document.addEventListener('change',e=>{if(e.target.matches('.qty input'))qv(e.target)});
 function order(c,btn){const i=btn&&btn.closest('.b').querySelector('.qty input');const n=i?qv(i):1;
-const msg="我要下单 "+c+"+"+n;try{navigator.clipboard.writeText(msg)}catch(e){}
+const msg=c+"+"+n;try{navigator.clipboard.writeText(msg)}catch(e){}
 const t=document.getElementById('t');t.textContent="已复制「"+msg+"」，正在打开 Messenger…";t.style.display='block';setTimeout(()=>t.style.display='none',3000);
 location.href=ORDER_URL.replace("{code}",encodeURIComponent(c)).replace("%2B1","%2B"+n);}
 const tabs=document.querySelectorAll('.tabs a');addEventListener('scroll',()=>{const m=document.getElementById('m').getBoundingClientRect().top<120;tabs[0].classList.toggle('on',!m);tabs[1].classList.toggle('on',m)},{passive:true});
+
+const sh=document.createElement('div');sh.id='sh';document.body.appendChild(sh);
+function openP(code){const a=document.querySelector('.c .code');let c=null;document.querySelectorAll('.c').forEach(x=>{if(x.querySelector('.code').textContent===code)c=x});if(!c){sh.classList.remove('on');document.body.style.overflow='';return}
+sh.innerHTML='<button class="x" aria-label="关闭" onclick="history.back()">✕</button>'+c.innerHTML.replace(/_card\.webp/,'.webp').replace(/ loading="lazy"/,'');
+sh.querySelectorAll('details').forEach(d=>d.open=true);sh.scrollTop=0;sh.classList.add('on');document.body.style.overflow='hidden'}
+function route(){const m=location.hash.match(/^#p-(.+)$/);if(m)openP(decodeURIComponent(m[1]));else{sh.classList.remove('on');document.body.style.overflow=''}}
+addEventListener('hashchange',route);
+document.addEventListener('click',e=>{const t=e.target;if(t.closest('#sh'))return;if(t.matches('.c img,.c h3')){location.hash='p-'+t.closest('.c').querySelector('.code').textContent}});
+route();
 </script></body></html>
