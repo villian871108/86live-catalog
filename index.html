@@ -35,7 +35,9 @@ footer{text-align:center;color:#999;font-size:12px;padding:24px 16px}.ship2{back
 #sh .x{position:sticky;top:0;float:right;margin:10px;width:40px;height:40px;border:0;border-radius:50%;background:#000a;color:#fff;font-size:22px;z-index:2}
 #sh img{width:100%;display:block}#sh .b{padding:14px 16px}#sh .code{font-weight:800;color:var(--pk)}#sh h3{font-size:18px;margin:6px 0}#sh small{display:block;color:#666;margin-bottom:6px}
 #sh .desc,#sh details{display:block}#sh .vid{display:block}#sh details:not([open])>pre{display:block}#sh summary{display:none}
-</style></head><body><header><h1 class="brand">86live</h1><div class="sub">🇹🇭 泰国代购</div><div class="co">86 LIVE MALL MALAYSIA S/B</div><div class="ship">🚚 西马邮费 <b>RM10</b>｜东马 <b>RM30</b>（超过2kg慢邮）任买</div></header>
+</style><script async src="https://www.googletagmanager.com/gtag/js?id=G-K2BJ4Q45NK"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-K2BJ4Q45NK');</script>
+</head><body><header><h1 class="brand">86live</h1><div class="sub">🇹🇭 泰国代购</div><div class="co">86 LIVE MALL MALAYSIA S/B</div><div class="ship">🚚 西马邮费 <b>RM10</b>｜东马 <b>RM30</b>（超过2kg慢邮）任买</div></header>
 <nav class="tabs"><a href="#df" class="on">Tofu</a><a href="#m">Makro</a></nav>
 <section id="df"><h2>Tofu<span>DF 系列</span></h2><div class="g"><article class="c"><img loading="lazy" src="img/DF1.webp" alt="DF1"><div class="b"><span class="code">DF1</span><h3>泰国爆款 Alpha Arbutin 3+ 胶原美白身体乳 350ml</h3><small>Precious Skin Alpha Arbutin 3+ Collagen Lotion 350ml</small><div class="p">RM27.00</div><div class="desc"><h4>产品介绍</h4><p>Precious Skin 是泰国本土人气身体护理品牌。这款 Alpha Arbutin 3+ 胶原身体乳含 α-熊果苷与胶原蛋白，质地易推开，日常涂抹帮助肌肤看起来更均匀透亮。大瓶装全家可用，性价比高。</p><h4>主要功效/特点</h4><ul><li>含 α-熊果苷，帮助改善暗沉、提亮肤色</li><li>添加胶原蛋白，滋润保湿、肌肤柔嫩</li><li>含 UV 防护成分，日常出门更安心</li><li>大容量，适合每天全身使用</li></ul><h4>适合人群</h4><p>想改善身体肤色暗沉、皮肤干燥的人士；适合马来西亚炎热天气日常使用</p><h4>使用方法</h4><p>沐浴后取适量均匀涂抹全身，轻揉至吸收；早晚各一次</p><h4>规格</h4><p>350ml</p></div><details><summary>查看详情</summary><pre>🇹🇭 泰国代购
 🔥【DF1】泰国爆款 Alpha Arbutin 3+ 胶原美白身体乳 350ml
@@ -2468,7 +2470,7 @@ const ORDER_URL = "https://m.me/86livemallmsdnbhd?text=" + "{code}%2B1";
 function qv(i){let n=parseInt(i.value,10);if(!(n>=1))n=1;n=Math.min(n,999);i.value=n;return n}
 function q(b,d){const i=b.parentNode.querySelector('input');i.value=qv(i)+d;qv(i)}
 document.addEventListener('change',e=>{if(e.target.matches('.qty input'))qv(e.target)});
-function order(c,btn){const i=btn&&btn.closest('.b').querySelector('.qty input');const n=i?qv(i):1;
+function order(c,btn){try{gtag('event','order_click',{product_code:c});}catch(e){}const i=btn&&btn.closest('.b').querySelector('.qty input');const n=i?qv(i):1;
 const msg=c+"+"+n;try{navigator.clipboard.writeText(msg)}catch(e){}
 const t=document.getElementById('t');t.textContent="已复制「"+msg+"」，正在打开 Messenger…";t.style.display='block';setTimeout(()=>t.style.display='none',3000);
 location.href=ORDER_URL.replace("{code}",encodeURIComponent(c)).replace("%2B1","%2B"+n);}
