@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://86livemall.com/sitemap.xml
