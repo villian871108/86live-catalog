@@ -1,6 +1,6 @@
-audio/bgm.mp3
-Title: Buy Something! (Shop Theme)
-Author: CleytonKauffman
-Source: https://opengameart.org/content/shop-theme
-License: CC0 1.0 Public Domain
-Re-encoded 64kbps mono.
+Title: Bossa Antigua
+Author: Kevin MacLeod (incompetech.com)
+Source: https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1100302
+License: Creative Commons Attribution 4.0 (CC BY 4.0) https://creativecommons.org/licenses/by/4.0/
+"Bossa Antigua" Kevin MacLeod (incompetech.com), Licensed under Creative Commons: By Attribution 4.0 License
+Trimmed to 4:00 with fades, re-encoded 64kbps mono.

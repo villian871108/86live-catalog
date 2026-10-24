@@ -1,5 +1,5 @@
 // BGM: "Buy Something!" by CleytonKauffman, CC0, https://opengameart.org/content/shop-theme
-(function(){var K='bgm_muted',a=new Audio('/audio/bgm.mp3');a.loop=true;a.volume=0.35;a.preload='none';
+(function(){var K='bgm_muted',a=new Audio('/audio/bgm.mp3?v=2');a.loop=true;a.volume=0.35;a.preload='none';
 var muted=localStorage.getItem(K)==='1',started=false,b=document.createElement('button');b.id='bgm';b.type='button';b.setAttribute('aria-label','背景音乐开关');
 function ui(){b.textContent=muted?'🔇':'🎵';b.className=muted?'off':(started&&!a.paused?'on':'')}
 function play(){if(muted)return;var p=a.play();if(p&&p.then)p.then(function(){started=true;ui()}).catch(function(){})}
