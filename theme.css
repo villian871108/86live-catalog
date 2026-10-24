@@ -30,3 +30,5 @@ header{padding-top:0}
 
 body,button,input{font-family:"Quicksand","Nunito","PingFang SC","Noto Sans SC","Microsoft YaHei",sans-serif}
 .brand{font-family:"Quicksand",sans-serif;font-weight:700}
+/* show full posters, no crop */
+.c img,.c a>img,.ph img{width:100%;height:auto!important;aspect-ratio:auto!important;object-fit:contain!important}
