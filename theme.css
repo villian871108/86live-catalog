@@ -1,29 +1,32 @@
-/* 2026-10 period theme: Thai festive green/gold/orange */
-:root{--pk:#e8590c;--pk2:#fcc419;--gr:#2b8a3e;--ink:#1f2a1f;--gold:#f2b705}
-body{background:linear-gradient(180deg,#fff4d6 0,#fffaf0 420px,#fff 100%)}
-.brand{background:linear-gradient(135deg,#2b8a3e,#e8590c 60%,#f2b705);-webkit-background-clip:text;background-clip:text;color:transparent}
-.sub{color:#2b8a3e;border-color:#f2b70599;background:#fffbe8}
-.co{color:#8a6d1f}.intro h1{color:#2b8a3e}.intro{color:#5a5030}
-.ship{box-shadow:0 4px 14px #e8590c22;color:#4a3d20;border:1px dashed #f2b705}
-.tabs{background:#fffaf0e6}.tabs a{color:#2b8a3e;box-shadow:0 2px 8px #2b8a3e22}
-.tabs a.on{background:linear-gradient(135deg,#2b8a3e,#51cf66);color:#fff}
-h2{color:#2b8a3e}h2 span{color:#c77d00}
-.c{border-radius:20px;box-shadow:0 6px 18px #8a6d1f1f;border:1px solid #f2b70533;transition:transform .15s,box-shadow .15s}
-.c:hover{transform:translateY(-3px);box-shadow:0 10px 24px #e8590c33}
-.c>img,.ph img,.c a>img{background:#fffaf0}
-.code{background:linear-gradient(135deg,#2b8a3e,#51cf66)}
-.p{color:#e8590c}.pl,summary{color:#2b8a3e}
-.qty{background:#fff4d6}.qty button{color:#e8590c}
-.ob{background:linear-gradient(135deg,#e8590c,#f59f00);box-shadow:0 4px 12px #e8590c55}
-.si{border-color:#f2b705}.desc{background:#fffaf0}.desc h4{color:#e8590c}
+/* 2026-10 period theme: soft pastel blush/cream/peach + light gold */
+:root{--pk:#e07a8f;--pk2:#f6e3b4;--gr:#c2557a;--ink:#4a3540;--gold:#d4af6a}
+body{background:linear-gradient(180deg,#fff1ef 0,#fffaf6 420px,#fff 100%)}
+.brand{background:linear-gradient(135deg,#c2557a,#e07a8f 60%,#d4af6a);-webkit-background-clip:text;background-clip:text;color:transparent}
+.sub{color:#c2557a;border-color:#d4af6a99;background:#fff8f2}
+.co{color:#b08a5a}.intro h1{color:#c2557a}.intro{color:#7a5a66}
+.ship{box-shadow:0 4px 14px #e07a8f22;color:#6a4a55;border:1px dashed #d4af6a}
+.tabs{background:#fffaf6e6}.tabs a{color:#c2557a;box-shadow:0 2px 8px #c2557a22}
+.tabs a.on{background:linear-gradient(135deg,#c2557a,#f4a6be);color:#fff}
+h2{color:#c2557a}h2 span{color:#b8925a}
+.c{border-radius:20px;box-shadow:0 6px 18px #b08a5a1f;border:1px solid #d4af6a33;transition:transform .15s,box-shadow .15s}
+.c:hover{transform:translateY(-3px);box-shadow:0 10px 24px #e07a8f33}
+.c>img,.ph img,.c a>img{background:#fffaf6}
+.code{background:linear-gradient(135deg,#c2557a,#f4a6be)}
+.p{color:#e07a8f}.pl,summary{color:#c2557a}
+.qty{background:#fff1ef}.qty button{color:#e07a8f}
+.ob{background:linear-gradient(135deg,#e07a8f,#f5b49b);box-shadow:0 4px 12px #e07a8f55}
+.si{border-color:#d4af6a}.desc{background:#fffaf6}.desc h4{color:#e07a8f}
 #sh .code{color:#fff}
 .hero{margin:0 0 14px;text-align:center}
-.hero img{display:block;width:100%;max-width:1100px;height:auto;margin:0 auto;border-radius:0 0 18px 18px;box-shadow:0 6px 20px #8a6d1f33}
-.hero .ch{display:none;padding:34px 16px 30px;color:#fff;background:radial-gradient(circle at 20% 20%,#fcc419 0,transparent 40%),radial-gradient(circle at 85% 70%,#ff922b 0,transparent 45%),linear-gradient(135deg,#2b8a3e,#37b24d 50%,#e8590c);border-radius:0 0 22px 22px;text-shadow:0 2px 6px #0004}
+.hero img{display:block;width:100%;max-width:1100px;height:auto;margin:0 auto;border-radius:0 0 18px 18px;box-shadow:0 6px 20px #b08a5a33}
+.hero .ch{display:none;padding:34px 16px 30px;color:#fff;background:radial-gradient(circle at 20% 20%,#f6e3b4 0,transparent 40%),radial-gradient(circle at 85% 70%,#ffc9a9 0,transparent 45%),linear-gradient(135deg,#c2557a,#f7b7a3 50%,#e07a8f);border-radius:0 0 22px 22px;text-shadow:0 2px 6px #0004}
 .hero.noimg img{display:none}.hero.noimg .ch{display:block}
-.hero .ch b{display:block;font-size:26px}.hero .ch .d{display:inline-block;margin:10px 0 6px;background:#fff;color:#e8590c;padding:5px 16px;border-radius:20px;font-weight:800;font-size:18px;text-shadow:none}
-.hero .ch small{display:block;color:#fffbe8;font-size:13px}
+.hero .ch b{display:block;font-size:26px}.hero .ch .d{display:inline-block;margin:10px 0 6px;background:#fff;color:#e07a8f;padding:5px 16px;border-radius:20px;font-weight:800;font-size:18px;text-shadow:none}
+.hero .ch small{display:block;color:#fff8f2;font-size:13px}
 header{padding-top:0}
-#bgm{position:fixed;right:14px;bottom:92px;z-index:12;width:46px;height:46px;border-radius:50%;border:2px solid #fff;background:linear-gradient(135deg,#f59f00,#e8590c);color:#fff;font-size:22px;box-shadow:0 4px 14px #0003;cursor:pointer}
+#bgm{position:fixed;right:14px;bottom:92px;z-index:12;width:46px;height:46px;border-radius:50%;border:2px solid #fff;background:linear-gradient(135deg,#f5b49b,#e07a8f);color:#fff;font-size:22px;box-shadow:0 4px 14px #0003;cursor:pointer}
 #bgm.off{background:#adb5bd;filter:grayscale(1)}#bgm.on{animation:bp 1.6s infinite}
 @keyframes bp{50%{transform:scale(1.08)}}
+
+body,button,input{font-family:"Quicksand","Nunito","PingFang SC","Noto Sans SC","Microsoft YaHei",sans-serif}
+.brand{font-family:"Quicksand",sans-serif;font-weight:700}
