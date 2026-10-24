@@ -1,0 +1,6 @@
+audio/bgm.mp3
+Title: Buy Something! (Shop Theme)
+Author: CleytonKauffman
+Source: https://opengameart.org/content/shop-theme
+License: CC0 1.0 Public Domain
+Re-encoded 64kbps mono.
