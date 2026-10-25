@@ -45,7 +45,7 @@ function q(b,d){const i=b.parentNode.querySelector('input');i.value=qv(i)+d;qv(i
 document.addEventListener('change',e=>{if(e.target.matches('.qty input'))qv(e.target)});
 function order(c,btn){try{gtag('event','order_click',{product_code:c});}catch(e){}const i=btn&&btn.closest('.b').querySelector('.qty input');const n=i?qv(i):1;
 const msg="我要下单 "+c+"+"+n;try{navigator.clipboard.writeText(msg)}catch(e){}
-const t=document.getElementById('t');t.textContent="已复制「"+msg+"」，正在打开 Messenger…";t.style.display='block';setTimeout(()=>t.style.display='none',3000);
+const t=document.getElementById('t');t.textContent="已复制「"+msg+"」，打开聊天后请长按输入框「粘贴」发送";t.style.display='block';setTimeout(()=>t.style.display="none",8000);
 goM(ORDER_URL.replace("{code}",encodeURIComponent("我要下单 "+c)).replace("%2B1","%2B"+n));}
 function goM(u){if(/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)){let gone=false;const h=()=>{gone=true};document.addEventListener("visibilitychange",h,{once:true});window.addEventListener("pagehide",h,{once:true});location.href="fb-messenger://user-thread/110619963693764";setTimeout(()=>{if(!gone&&!document.hidden)location.href=u},1500)}else location.href=u}
 </script><script>
