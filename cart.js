@@ -5,7 +5,8 @@ function ld(){try{var a=JSON.parse(localStorage.getItem(K)||'[]');return Array.i
 function sv(a){try{localStorage.setItem(K,JSON.stringify(a))}catch(e){}render()}
 function pr(s){var m=String(s||'').replace(/,/g,'').match(/(\d+(?:\.\d+)?)/);return m?parseFloat(m[1]):null}
 function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
-function msg(a){return '我要下单\n'+a.map(function(x){return x.c+' x'+x.n}).join('\n')}
+function pu(c){return 'https://86livemall.com/p/'+encodeURIComponent(String(c).trim().split(/\s+/)[0])+'.html'}
+function msg(a){return '我要下单\n'+a.map(function(x){return x.c+' x'+x.n+' '+pu(x.c)}).join('\n')}
 function url(m){return 'https://m.me/'+MID+'?text='+encodeURIComponent(m)}
 var css='#cb{position:fixed;right:16px;bottom:18px;z-index:9000;background:#e8457c;color:#fff;border:0;border-radius:30px;padding:13px 18px;font-size:17px;font-weight:700;box-shadow:0 6px 18px #0004;cursor:pointer}#cb b{background:#fff;color:#e8457c;border-radius:12px;padding:1px 8px;margin-left:6px;font-size:15px}#cb.bump{animation:cbb .4s}@keyframes cbb{50%{transform:scale(1.15)}}'+
 '#cm{position:fixed;inset:0;background:#0006;z-index:9500;display:none}#cp{position:absolute;left:0;right:0;bottom:0;max-height:85vh;overflow:auto;background:#fff;color:#222;border-radius:18px 18px 0 0;padding:16px;box-sizing:border-box;max-width:560px;margin:0 auto;font-size:15px}'+
