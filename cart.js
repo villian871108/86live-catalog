@@ -7,6 +7,8 @@ function pr(s){var m=String(s||'').replace(/,/g,'').match(/(\d+(?:\.\d+)?)/);ret
 function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
 function pu(c){return 'https://86livemall.com/p/'+encodeURIComponent(String(c).trim().split(/\s+/)[0])+'.html'}
 function msg(a){return '我要下单\n'+a.map(function(x){return x.c+' x'+x.n+' '+pu(x.c)}).join('\n')}
+function ga(n,o){try{if(typeof window.gtag=='function'){o.transport_type='beacon';window.gtag('event',n,o)}}catch(e){}}
+function po(a,via){ga('place_order',{items:a.length,value_codes:a.map(function(x){return x.c}).join(','),via:via})}
 function url(m){return 'https://m.me/'+MID+'?text='+encodeURIComponent(m)}
 var css='#cb{position:fixed;right:16px;bottom:18px;z-index:9000;background:#e8457c;color:#fff;border:0;border-radius:30px;padding:13px 18px;font-size:17px;font-weight:700;box-shadow:0 6px 18px #0004;cursor:pointer}#cb b{background:#fff;color:#e8457c;border-radius:12px;padding:1px 8px;margin-left:6px;font-size:15px}#cb.bump{animation:cbb .4s}@keyframes cbb{50%{transform:scale(1.15)}}'+
 '#cm{position:fixed;inset:0;background:#0006;z-index:9500;display:none}#cp{position:absolute;left:0;right:0;bottom:0;max-height:85vh;overflow:auto;background:#fff;color:#222;border-radius:18px 18px 0 0;padding:16px;box-sizing:border-box;max-width:560px;margin:0 auto;font-size:15px}'+
@@ -28,11 +30,11 @@ document.getElementById('csend').disabled=!a.length}
 function toast(s){ct.textContent=s;ct.style.display='block';clearTimeout(ct._t);ct._t=setTimeout(function(){ct.style.display='none'},1800)}
 window.cartAdd=function(c,btn){var b=btn&&btn.closest('.b'),n=1,t='',p=null;
 if(b){var i=b.querySelector('.qty input');if(i)n=typeof qv=='function'?qv(i):(parseInt(i.value,10)||1);var h=b.querySelector('h3,h1');if(h)t=h.textContent.trim();var pe=b.querySelector('.p');if(pe)p=pr(pe.textContent)}
-var a=ld(),f=a.filter(function(x){return x.c===c})[0];if(f){f.n=Math.min(999,f.n+n);if(t)f.t=t;if(p!=null)f.p=p}else a.push({c:c,n:n,t:t,p:p});sv(a);
+var a=ld(),f=a.filter(function(x){return x.c===c})[0];if(f){f.n=Math.min(999,f.n+n);if(t)f.t=t;if(p!=null)f.p=p}else a.push({c:c,n:n,t:t,p:p});sv(a);ga('add_to_cart',{item_code:c,quantity:n});
 cb.classList.remove('bump');void cb.offsetWidth;cb.classList.add('bump');toast('✅ 已加入购物车：'+c+' x'+n)};
 window.cartMsg=function(){return msg(ld())};window.cartUrl=function(){return url(msg(ld()))};
 function send(){var a=ld();if(!a.length)return;var m=msg(a),u=url(m);
-try{a.forEach(function(x){gtag('event','order_click',{product_code:x.c,quantity:x.n,via:'cart'})})}catch(e){}
+po(a,'cart');
 var t=document.getElementById('t');if(t){t.textContent='已复制订单，进入 Messenger 后长按输入框 → 粘贴 → 发送';t.style.display='block';setTimeout(function(){t.style.display='none'},20000)}
 var done=false;function go(){if(done)return;done=true;try{localStorage.removeItem(K)}catch(e){}render();cm.style.display='none';location.href=u}
 try{navigator.clipboard.writeText(m).then(go,go)}catch(e){go()}setTimeout(go,1500)}
@@ -41,5 +43,6 @@ cm.addEventListener('click',function(e){var g=e.target;if(g===cm||g.id==='cx'){c
 if(g.dataset.d){var a=ld(),x=a[+g.dataset.i];x.n=Math.max(1,Math.min(999,x.n+ +g.dataset.d));sv(a)}
 else if(g.dataset.r){var a2=ld();a2.splice(+g.dataset.r,1);sv(a2)}
 else if(g.id==='cclr'){if(confirm('确定清空购物车？'))sv([])}else if(g.id==='csend')send()});
+document.addEventListener('click',function(e){var l=e.target.closest&&e.target.closest('a[href*="m.me/"]');if(!l||l.href.indexOf('text=')<0)return;var t='';try{t=decodeURIComponent(l.href.split('text=')[1])}catch(_){}var cs=(t.match(/\b[A-Z]{1,3}\d+[A-Z]?\b/g)||[]);po(cs.map(function(c){return{c:c}}),'link')},true);
 addEventListener('storage',function(e){if(e.key===K)render()});
 if(document.body)mount();else document.addEventListener('DOMContentLoaded',mount)})();
