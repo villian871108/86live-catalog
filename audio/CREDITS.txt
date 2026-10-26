@@ -4,3 +4,7 @@ Source: https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1100302
 License: Creative Commons Attribution 4.0 (CC BY 4.0) https://creativecommons.org/licenses/by/4.0/
 "Bossa Antigua" Kevin MacLeod (incompetech.com), Licensed under Creative Commons: By Attribution 4.0 License
 Trimmed to 4:00 with fades, re-encoded 64kbps mono.
+
+Hourly rotation playlist (track = hours since epoch % 7): Bossa Antigua (bgm.mp3), Monkeys Spinning Monkeys, Carefree, Fluffing a Duck, Happy Alley, Sneaky Snitch, Wallpaper.
+All by Kevin MacLeod (incompetech.com), Licensed under Creative Commons: By Attribution 4.0 License https://creativecommons.org/licenses/by/4.0/
+Re-encoded 64kbps mono.
