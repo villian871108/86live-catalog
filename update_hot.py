@@ -21,6 +21,7 @@ SITE = Path(__file__).resolve().parent
 IDX = SITE / 'index.html'
 DATA = SITE / 'data'
 N_ROW = 8
+WEB_PREFIX = ('M', 'T')  # website-order code prefixes (Makro, Tofu)
 
 def site_codes(h):
     L = h[h.find('<div id="list">'):]
@@ -48,7 +49,8 @@ def load_sold(path, codes):
         if mt < dt.datetime.fromisoformat(e['until']):
             ex = set(e['codes'])
     cs = set(codes)
-    return {k: v for k, v in raw.items() if k in cs and k not in ex and v > 0}, ex
+    # only Makro (M*) and Tofu (T*) are website orders; other series (X...) are live-stream sales
+    return {k: v for k, v in raw.items() if k in cs and k not in ex and v > 0 and k[0] in WEB_PREFIX}, ex
 
 def views_from_csv(path):
     v = {}
