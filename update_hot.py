@@ -132,10 +132,13 @@ def main():
     sold_mt = dt.datetime.fromtimestamp(os.path.getmtime(a.sold))
     json.dump(dict(sorted(sold.items(), key=lambda kv: -kv[1])), open(DATA / 'sold.json', 'w'), ensure_ascii=False, indent=0)
     json.dump(dict(sorted(views.items(), key=lambda kv: -kv[1])), open(vf, 'w'), ensure_ascii=False, indent=0)
-    json.dump({'built': now.isoformat(timespec='minutes'), 'sold_source': a.sold,
-               'sold_source_mtime': sold_mt.isoformat(timespec='minutes'), 'excluded': sorted(ex, key=natkey),
-               'hot': [[k, sold[k]] for k in hot], 'view': [[k, views[k]] for k in view]},
-              open(DATA / 'hot_meta.json', 'w'), ensure_ascii=False, indent=1)
+    meta = {'sold_source': a.sold, 'sold_source_mtime': sold_mt.isoformat(timespec='minutes'),
+            'excluded': sorted(ex, key=natkey), 'hot': [[k, sold[k]] for k in hot], 'view': [[k, views[k]] for k in view]}
+    mf = DATA / 'hot_meta.json'
+    prev = json.load(open(mf)) if mf.exists() else {}
+    prev.pop('built', None)
+    if prev != meta:  # only touch 'built' when data actually changed
+        json.dump({'built': now.isoformat(timespec='minutes'), **meta}, open(mf, 'w'), ensure_ascii=False, indent=1)
     upd = sold_mt.strftime('%d/%m %H:%M')
     new = patch(h, html_block(upd), js_block(sold, hot, view))
     print('🔥 最多人下单:', ', '.join(f'{k}({sold[k]})' for k in hot))
