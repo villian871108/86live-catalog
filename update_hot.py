@@ -22,6 +22,9 @@ IDX = SITE / 'index.html'
 DATA = SITE / 'data'
 N_ROW = 8
 WEB_PREFIX = ('M', 'T')  # website-order code prefixes (Makro, Tofu)
+# Codes taken down from the site (2026-11-02): Makro M+digits (backup site_makro_removed_20261102.json)
+# and Tofu T+digits (backup site_t_removed_20261102.json). Never show them in TOP rows / badges.
+HIDDEN = re.compile(r'^(M|T)\d+$')
 
 def site_codes(h):
     L = h[h.find('<div id="list">'):]
@@ -50,7 +53,7 @@ def load_sold(path, codes):
             ex = set(e['codes'])
     cs = set(codes)
     # only Makro (M*) and Tofu (T*) are website orders; other series (X...) are live-stream sales
-    return {k: v for k, v in raw.items() if k in cs and k not in ex and v > 0 and k[0] in WEB_PREFIX}, ex
+    return {k: v for k, v in raw.items() if k in cs and k not in ex and v > 0 and k[0] in WEB_PREFIX and not HIDDEN.match(k)}, ex
 
 def views_from_csv(path):
     v = {}
@@ -128,7 +131,7 @@ def main():
     if a.views_csv: views = views_from_csv(a.views_csv)
     elif a.views_json: views = {k.upper(): int(v) for k, v in json.load(open(a.views_json)).items()}
     else: views = json.load(open(vf)) if vf.exists() else {}
-    views = {k: v for k, v in views.items() if k in set(codes) and v > 0}
+    views = {k: v for k, v in views.items() if k in set(codes) and v > 0 and not HIDDEN.match(k)}
     hot, view = top(sold), top(views)
     now = dt.datetime.now()
     sold_mt = dt.datetime.fromtimestamp(os.path.getmtime(a.sold))
